@@ -39,6 +39,10 @@ app.use('/api/auth', authRoutes)
 app.use('/api/profile', profileRoutes)
 app.use('/api/message/', messageRoutes)
 
+app.get('/', (req, res) => {
+    res.send('HELLO FRONTEND')
+})
+
 const server = app.listen(4040)
 
 const wss = new ws.WebSocketServer({ server })
